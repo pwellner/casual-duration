@@ -7,7 +7,7 @@ function format(ageMs, short) {
     let ageWeek = ageDay / 7;
     let ageMonth = ageDay / 30;
 
-    // Round up when very close to next number
+    // Round up when close to next number
     ageSec = Math.floor(ageSec + .1);
     ageMin = Math.floor(ageMin + .1);
     ageHour = Math.floor(ageHour + .1);
@@ -19,7 +19,7 @@ function format(ageMs, short) {
         if (short) {
             return ageMonth + "mo";
         }
-        return (ageWeek == 1) ? "1 month" : (ageWeek + " months");
+        return (ageMonth == 1) ? "1 month" : (ageMonth + " months");
     }
     if (ageWeek) {
         if (short) {
@@ -56,4 +56,3 @@ function format(ageMs, short) {
 
 
 module.exports.format = format;
-
