@@ -35,3 +35,8 @@ test("months", () => {
     expect(format(3.5 * 30 * 24 * 60 * 60 * 1000, true)).toBe("3mo");
 });
 
+test("invalid duration", () => {
+    expect(format()).toBe("-");
+    expect(format(0)).toBe("-");
+    expect(format("foo")).toBe("-");
+});

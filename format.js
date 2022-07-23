@@ -52,6 +52,7 @@ function format(ageMs, short) {
         return (ageSec == 1) ? "1 second" : (ageSec + " seconds");
     }
 
+    return "-"
 }
 
 
